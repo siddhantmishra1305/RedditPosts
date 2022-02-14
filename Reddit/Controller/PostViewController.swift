@@ -17,6 +17,9 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         postCollectionView.register(UINib(nibName: "PostCell", bundle: nil), forCellWithReuseIdentifier: "PostCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         postViewModel.getPosts { [weak self]isSuccess, message in
             if isSuccess{
                 DispatchQueue.main.async {
@@ -24,8 +27,7 @@ class PostViewController: UIViewController {
                 }
             }
         }
-    }
-}
+    }}
 
 extension PostViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,6 +53,10 @@ extension PostViewController: UICollectionViewDelegate, UICollectionViewDataSour
         navigateToDetailScreenWithDetail(postInfo: postDetails)
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.searchPostBar.endEditing(true)
+    }
+    
     func navigateToDetailScreenWithDetail(postInfo:PostInfo){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let postDetailVC = storyBoard.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
@@ -62,7 +68,14 @@ extension PostViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension  PostViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            searchBar.resignFirstResponder()
+        }
         postViewModel.filterPosts(title: searchText)
         postCollectionView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchPostBar.endEditing(true)
     }
 }
