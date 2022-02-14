@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostDetailView" customModule="Reddit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="684"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-Lw-LhG">
+                    <rect key="frame" x="0.0" y="0.0" width="358" height="342"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e5P-M1-FCm">
+                    <rect key="frame" x="15" y="372" width="328" height="27.666666666666686"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMP-9i-xy0">
+                            <rect key="frame" x="0.0" y="0.0" width="295.66666666666669" height="27.666666666666668"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-hb-VcQ">
+                            <rect key="frame" x="300.66666666666669" y="0.0" width="27.333333333333314" height="27.666666666666668"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Gs0-nk-gX2"/>
+                            </constraints>
+                            <state key="normal">
+                                <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="regular"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ywu-kR-R22">
+                    <rect key="frame" x="169" y="161" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Description Description Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-Zy-1f5">
+                    <rect key="frame" x="15" y="439.66666666666669" width="328" height="40.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xga-XJ-lmB">
+                    <rect key="frame" x="15" y="419.66666666666669" width="328" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Axg-Zy-1f5" firstAttribute="trailing" secondItem="xga-XJ-lmB" secondAttribute="trailing" id="0Fw-HV-326"/>
+                <constraint firstItem="Axg-Zy-1f5" firstAttribute="leading" secondItem="xga-XJ-lmB" secondAttribute="leading" id="5w8-k9-VAJ"/>
+                <constraint firstItem="xga-XJ-lmB" firstAttribute="top" secondItem="e5P-M1-FCm" secondAttribute="bottom" constant="20" id="BWO-fo-Zf7"/>
+                <constraint firstItem="V9l-Lw-LhG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="T5v-8H-fHG"/>
+                <constraint firstItem="xga-XJ-lmB" firstAttribute="leading" secondItem="sMP-9i-xy0" secondAttribute="leading" id="YQb-4n-FeM"/>
+                <constraint firstItem="Ywu-kR-R22" firstAttribute="centerY" secondItem="V9l-Lw-LhG" secondAttribute="centerY" id="Zcz-wi-7k5"/>
+                <constraint firstItem="V9l-Lw-LhG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cva-mm-VPN"/>
+                <constraint firstItem="V9l-Lw-LhG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eVo-7w-ua4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Axg-Zy-1f5" secondAttribute="bottom" constant="203.66999999999999" id="hrY-Mx-EU7"/>
+                <constraint firstItem="e5P-M1-FCm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="iFX-qv-Oac"/>
+                <constraint firstItem="V9l-Lw-LhG" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="iuo-d9-Bzn"/>
+                <constraint firstItem="xga-XJ-lmB" firstAttribute="trailing" secondItem="FYD-hb-VcQ" secondAttribute="trailing" id="oON-ef-sRr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e5P-M1-FCm" secondAttribute="trailing" constant="15" id="pDp-4y-6ZM"/>
+                <constraint firstItem="Axg-Zy-1f5" firstAttribute="top" secondItem="xga-XJ-lmB" secondAttribute="bottom" constant="20" id="rhg-EC-5c6"/>
+                <constraint firstItem="Ywu-kR-R22" firstAttribute="centerX" secondItem="V9l-Lw-LhG" secondAttribute="centerX" id="w1H-kh-1Lo"/>
+                <constraint firstItem="e5P-M1-FCm" firstAttribute="top" secondItem="V9l-Lw-LhG" secondAttribute="bottom" constant="30" id="wxb-S7-0K8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityIndicator" destination="Ywu-kR-R22" id="Lbw-dR-sOJ"/>
+                <outlet property="author_lbl" destination="xga-XJ-lmB" id="BLr-tk-eY1"/>
+                <outlet property="imageView" destination="V9l-Lw-LhG" id="oXq-z6-YXj"/>
+                <outlet property="markAsFavBtn" destination="FYD-hb-VcQ" id="8nw-54-jLu"/>
+                <outlet property="postDescription" destination="Axg-Zy-1f5" id="KOb-LK-pqH"/>
+                <outlet property="title_lbl" destination="sMP-9i-xy0" id="mPu-iu-qZ1"/>
+            </connections>
+            <point key="canvasLocation" x="272.30769230769232" y="-47.630331753554501"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

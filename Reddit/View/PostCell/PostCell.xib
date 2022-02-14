@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="gTV-IL-0wX" userLabel="PostCell" customClass="PostCell" customModule="Reddit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="305"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="305"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0u-O9-nmy">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="305"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lyD-Nb-rcT">
+                                <rect key="frame" x="5" y="5" width="190" height="181.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5no-VV-L13">
+                                <rect key="frame" x="8.5" y="196.5" width="183" height="15.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-DY-HTi">
+                                <rect key="frame" x="90" y="86" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kr-ax-R4s">
+                                <rect key="frame" x="8.5" y="220" width="183" height="77"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1kr-ax-R4s" firstAttribute="top" secondItem="5no-VV-L13" secondAttribute="bottom" constant="8" symbolic="YES" id="60o-XG-DHT"/>
+                            <constraint firstItem="Ygc-DY-HTi" firstAttribute="centerX" secondItem="lyD-Nb-rcT" secondAttribute="centerX" id="BQC-gm-RuA"/>
+                            <constraint firstAttribute="trailing" secondItem="lyD-Nb-rcT" secondAttribute="trailing" constant="5" id="CWg-5B-kKl"/>
+                            <constraint firstItem="5no-VV-L13" firstAttribute="top" secondItem="lyD-Nb-rcT" secondAttribute="bottom" constant="10" id="KIN-Gx-HAP"/>
+                            <constraint firstAttribute="trailing" secondItem="5no-VV-L13" secondAttribute="trailing" constant="8.5" id="N7G-pr-Ebr"/>
+                            <constraint firstItem="Ygc-DY-HTi" firstAttribute="centerY" secondItem="lyD-Nb-rcT" secondAttribute="centerY" id="UO0-Jq-m4m"/>
+                            <constraint firstItem="lyD-Nb-rcT" firstAttribute="height" secondItem="z0u-O9-nmy" secondAttribute="height" multiplier="0.595652" id="dye-aM-BY9"/>
+                            <constraint firstItem="5no-VV-L13" firstAttribute="leading" secondItem="z0u-O9-nmy" secondAttribute="leading" constant="8.5" id="mxQ-py-z0s"/>
+                            <constraint firstItem="1kr-ax-R4s" firstAttribute="leading" secondItem="5no-VV-L13" secondAttribute="leading" id="nQ8-ZI-RHF"/>
+                            <constraint firstItem="lyD-Nb-rcT" firstAttribute="top" secondItem="z0u-O9-nmy" secondAttribute="top" constant="5" id="r8l-iw-VkZ"/>
+                            <constraint firstItem="1kr-ax-R4s" firstAttribute="trailing" secondItem="5no-VV-L13" secondAttribute="trailing" id="sfD-MP-nnT"/>
+                            <constraint firstAttribute="bottom" secondItem="1kr-ax-R4s" secondAttribute="bottom" constant="8" id="ue3-Zw-fT2"/>
+                            <constraint firstItem="lyD-Nb-rcT" firstAttribute="leading" secondItem="z0u-O9-nmy" secondAttribute="leading" constant="5" id="yZp-jd-FnL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z0u-O9-nmy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0hj-Sg-uhS"/>
+                <constraint firstAttribute="trailing" secondItem="z0u-O9-nmy" secondAttribute="trailing" id="UHl-gv-d1y"/>
+                <constraint firstItem="z0u-O9-nmy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dcs-AA-wtO"/>
+                <constraint firstAttribute="bottom" secondItem="z0u-O9-nmy" secondAttribute="bottom" id="kbE-95-va0"/>
+            </constraints>
+            <size key="customSize" width="200" height="321"/>
+            <connections>
+                <outlet property="activityIndicator" destination="Ygc-DY-HTi" id="f9a-v5-cwL"/>
+                <outlet property="date_lbl" destination="5no-VV-L13" id="B6N-GG-VZh"/>
+                <outlet property="galleryImageView" destination="lyD-Nb-rcT" id="bnI-wt-yWw"/>
+                <outlet property="title_lbl" destination="1kr-ax-R4s" id="AGa-vG-mA1"/>
+            </connections>
+            <point key="canvasLocation" x="246.37681159420291" y="150.33482142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
